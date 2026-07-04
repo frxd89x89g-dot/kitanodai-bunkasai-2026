@@ -55,7 +55,9 @@ html {
     scroll-padding-top: 64px;
   }
 }
-
+.mobile-only {
+  display: none !important;
+}
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -106,7 +108,7 @@ h1, h2, h3, .nav-link, .btn, .hero-title, .hero-tagline, .section-header h2, .ca
 
 body, p, li, .info-value, .card-content p, .entry-card, .section-header p {
   word-break: normal;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   line-break: strict;
 }
 
@@ -411,7 +413,7 @@ img {
   transform: translateY(-2px);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .nav-toggle {
     display: none;
   }
@@ -427,17 +429,17 @@ img {
   }
   .nav-list {
     flex-direction: row;
-    gap: 24px; /* Set gap between 18px and 24px to prevent crowded nav wrapping */
+    gap: 18px; /* Default gap between 18px and 24px */
     align-items: center;
   }
   .nav-link {
     font-family: var(--font-sans);
-    font-size: 0.9rem; /* Reduced font size to 0.9rem to prevent wrapping on PC */
     font-weight: 500;
     color: var(--text-color);
     padding: 0;
     letter-spacing: 0.05em;
     white-space: nowrap; /* Prevent line wrapping on PC */
+    font-size: 0.85rem; /* Default compact font size for narrower PC screens (1024px) */
   }
   .nav-link::after {
     content: '';
@@ -450,6 +452,10 @@ img {
   }
   .nav-link:hover::after {
     width: 100%;
+  }
+
+  .logo-text {
+    font-size: 1.15rem !important; /* Slightly smaller logo text for 1024px */
   }
 
   .nav-link.nav-cta {
@@ -476,6 +482,32 @@ img {
 
   .nav-link.nav-cta::after {
     display: none !important;
+  }
+}
+
+/* Sub-breakpoint: 1200px - 1439px screen width nav optimization */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .nav-list {
+    gap: 20px;
+  }
+  .nav-link {
+    font-size: 0.875rem;
+  }
+  .logo-text {
+    font-size: 1.25rem !important;
+  }
+}
+
+/* Sub-breakpoint: 1440px and up screen width nav optimization */
+@media (min-width: 1440px) {
+  .nav-list {
+    gap: 24px;
+  }
+  .nav-link {
+    font-size: 0.9rem;
+  }
+  .logo-text {
+    font-size: 1.35rem !important;
   }
 }
 
@@ -619,12 +651,21 @@ img {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
+  width: 100%;
 }
 
-@media (min-width: 480px) {
+.hero-actions .btn {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
   .hero-actions {
     flex-direction: row;
     align-items: center;
+  }
+  .hero-actions .btn {
+    width: auto;
   }
 }
 
@@ -1510,7 +1551,7 @@ img {
 @media (min-width: 768px) {
   .access-grid {
     grid-template-columns: 1.2fr 1fr;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-md);
   }
   .access-map {
     height: 100%;
@@ -1522,6 +1563,12 @@ img {
   .info-label {
     flex: 0 0 100px;
     padding-top: 2px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .access-grid {
+    gap: var(--spacing-xl);
   }
 }
 
@@ -1728,6 +1775,10 @@ body.state-menu-open {
    9. Mobile Specific Typography & Word Wrap Optimizations
    ========================================================================== */
 @media (max-width: 767px) {
+  .mobile-only {
+    display: inline !important;
+  }
+
   h2 {
     font-size: clamp(2rem, 9vw, 2.8rem) !important;
   }
@@ -1767,7 +1818,7 @@ body.state-menu-open {
     font-size: 1rem !important;
     line-height: 1.7 !important;
     word-break: normal !important;
-    overflow-wrap: anywhere !important;
+    overflow-wrap: break-word !important; /* Changed from anywhere to break-word */
   }
 }
 
