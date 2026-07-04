@@ -94,6 +94,7 @@
           <li><a href="#about" class="nav-link">文化祭について</a></li>
           <li><a href="#highlights" class="nav-link">昨年の開催内容</a></li>
           <li><a href="#gallery" class="nav-link">ギャラリー</a></li>
+          <li><a href="#entry" class="nav-link">出展エントリー</a></li>
           <li><a href="#kitanon" class="nav-link">きたのん</a></li>
           <li><a href="#instagram" class="nav-link">SNS</a></li>
           <li><a href="#access" class="nav-link">アクセス</a></li>
@@ -120,7 +121,10 @@
             <div class="hero-meta-divider"></div>
             <p class="hero-schedule">2026.10.31 [Sat] - 11.01 [Sun]</p>
             <p class="hero-venue">会場：北野台自治会館</p>
-            <a href="#access" class="btn btn-primary" id="heroCta">文化祭を体験する</a>
+            <div class="hero-actions">
+              <a href="#access" class="btn btn-primary" id="heroCta">文化祭を体験する</a>
+              <a href="https://forms.gle/fkSQjngs3iKXx2Yv7" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="heroEntryCta" aria-label="Googleフォームで出展エントリーを開く（新しいタブで開きます）">出展エントリーはこちら</a>
+            </div>
           </div>
         </div>
       </div>
@@ -140,9 +144,21 @@
           <h2>お知らせ</h2>
         </div>
         <div class="news-list">
+          <!-- 出展エントリー案内 -->
+          <div class="news-item">
+            <span class="news-date">2026.07</span>
+            <div class="news-content">
+              <h3 class="news-item-title">出展エントリー受付開始</h3>
+              <p class="news-item-body">作品展示の出展エントリー受付を開始しました。応募締切は9月12日（土）です。Googleフォームよりお申し込みください。</p>
+              <a href="https://forms.gle/fkSQjngs3iKXx2Yv7" target="_blank" rel="noopener noreferrer" class="news-link-btn" aria-label="Googleフォームで出展エントリーを開く（新しいタブで開きます）">Googleフォームはこちら ➔</a>
+            </div>
+          </div>
+          <!-- 過去のお知らせ -->
           <div class="news-item">
             <span class="news-date">2026.06</span>
-            <p class="news-text">北野台文化祭2026オフィシャルサイト公開</p>
+            <div class="news-content">
+              <p class="news-text">北野台文化祭2026オフィシャルサイト公開</p>
+            </div>
           </div>
         </div>
       </div>
@@ -272,6 +288,52 @@
     </section>
 
     <!-- ==========================================
+         4.5. Entry Section (出展エントリー受付中)
+         ========================================== -->
+    <section class="section entry-section fade-in-section" id="entry">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Entry</span>
+          <h2>出展エントリー受付中</h2>
+          <p>あなたの作品をお待ちしています</p>
+        </div>
+        
+        <div class="entry-grid">
+          <div class="entry-card">
+            <div class="entry-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+            </div>
+            <p class="entry-card-text">作品が完成していなくても申し込みできます。</p>
+          </div>
+          <div class="entry-card">
+            <div class="entry-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+            </div>
+            <p class="entry-card-text">作品タイトルやコメントは後日変更できます。</p>
+          </div>
+          <div class="entry-card">
+            <div class="entry-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <p class="entry-card-text">地域の皆さんの作品を募集しています。</p>
+          </div>
+          <div class="entry-card">
+            <div class="entry-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <p class="entry-card-text">応募締切は <strong>2026年9月12日（土）</strong> です。</p>
+          </div>
+        </div>
+        
+        <div class="entry-action-wrapper">
+          <a href="https://forms.gle/fkSQjngs3iKXx2Yv7" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large" aria-label="Googleフォームで出展エントリーを開く（新しいタブで開きます）">
+            Googleフォームから申し込む
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
          5. Kitanon Corner
          ========================================== -->
     <section class="section kitanon-section fade-in-section" id="kitanon">
@@ -390,6 +452,7 @@
         <a href="#about">文化祭について</a>
         <a href="#highlights">昨年の開催内容</a>
         <a href="#gallery">ギャラリー</a>
+        <a href="#entry">出展エントリー</a>
         <a href="#kitanon">きたのん</a>
         <a href="#instagram">SNS</a>
         <a href="#access">アクセス</a>

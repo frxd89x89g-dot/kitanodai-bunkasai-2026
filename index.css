@@ -46,6 +46,16 @@
 /* ==========================================================================
    Reset & Base Styles
    ========================================================================== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 64px;
+  }
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -531,6 +541,19 @@ img {
   margin-bottom: var(--spacing-lg);
 }
 
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+@media (min-width: 480px) {
+  .hero-actions {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
 /* Pop-up Kitanon */
 .hero-kitanon-pop {
   position: absolute;
@@ -623,6 +646,42 @@ img {
   font-weight: 500;
   color: var(--text-color);
   margin-bottom: 0;
+}
+
+.news-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  flex: 1;
+}
+
+.news-item-title {
+  font-size: 1.1rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.news-item-body {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  line-height: 1.6;
+}
+
+.news-link-btn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 1px solid transparent;
+  width: fit-content;
+}
+
+.news-link-btn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color-hover);
 }
 
 @media (min-width: 768px) {
@@ -1013,6 +1072,93 @@ img {
     grid-row: span 2;
     height: calc(500px + var(--spacing-md));
   }
+}
+
+/* ==========================================================================
+   4.5. Entry Section Styles (出展エントリー受付中)
+   ========================================================================== */
+.entry-section {
+  background-color: var(--main-color-light);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.entry-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+  max-width: 1000px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+@media (min-width: 600px) {
+  .entry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .entry-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.entry-card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-md); /* 18px corners */
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-sm);
+  transition: var(--transition-base);
+}
+
+.entry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.entry-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background-color: var(--main-color-light);
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.entry-card-icon svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.entry-card-text {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+.entry-card-text strong {
+  color: var(--accent-color);
+}
+
+.entry-action-wrapper {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+}
+
+.btn-large {
+  padding: 18px 48px;
+  font-size: 1.05rem;
+  box-shadow: 0 8px 24px rgba(207, 112, 81, 0.15);
 }
 
 /* ==========================================================================
