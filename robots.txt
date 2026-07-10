@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://kitanodai-fes.com/sitemap.xml
+Sitemap: https://frxd89x89g-dot.github.io/kitanodai-bunkasai-2026/sitemap.xml
