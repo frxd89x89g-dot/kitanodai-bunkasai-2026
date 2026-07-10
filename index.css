@@ -983,6 +983,14 @@ img {
   padding: var(--spacing-sm) 0;
 }
 
+@media (max-width: 1023px) {
+  .highlights-carousel-wrapper {
+    overflow: hidden;
+    margin-left: calc(-1 * var(--spacing-md));
+    margin-right: calc(-1 * var(--spacing-md));
+  }
+}
+
 /* Horizontal Swiper styling */
 .highlights-carousel {
   display: flex;
@@ -991,7 +999,7 @@ img {
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   padding: 0 var(--spacing-md) var(--spacing-md);
-  margin: 0 calc(-1 * var(--spacing-md));
+  margin: 0;
 }
 
 .highlights-carousel::-webkit-scrollbar {
@@ -1775,6 +1783,12 @@ body.state-menu-open {
   .theme-info-box {
     padding: var(--spacing-sm) !important;
   }
+  .organic-frame {
+    height: 280px;
+  }
+  .logo-text {
+    font-size: 1.2rem !important;
+  }
 }
 
 /* Workshop image crop adjustment */
@@ -1836,6 +1850,17 @@ body.state-menu-open {
   }
   .theme-info-box {
     padding: var(--spacing-md) !important;
+  }
+
+  h1, h2, h3, .nav-link, .btn, .hero-title, .hero-tagline, .section-header h2, .card-content h3 {
+    word-break: normal;
+  }
+  .btn {
+    white-space: normal;
+    padding: 14px 24px;
+  }
+  .card-content {
+    padding: var(--spacing-md) var(--spacing-sm);
   }
 }
 
