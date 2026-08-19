@@ -2011,6 +2011,12 @@ body.state-menu-open {
   padding: var(--spacing-md) var(--spacing-lg);
   box-shadow: var(--shadow-sm);
   transition: var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-card-valign {
+  justify-content: center;
 }
 
 .profile-card-header {
@@ -2039,6 +2045,14 @@ body.state-menu-open {
   color: var(--text-color);
 }
 
+.profile-card-text {
+  font-size: clamp(0.95rem, 2.8vw, 1.05rem);
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-top: var(--spacing-xs);
+}
+
 .profile-hobbies-list {
   list-style: none;
   padding: 0;
@@ -2046,10 +2060,11 @@ body.state-menu-open {
 }
 
 .profile-hobbies-list li {
-  font-size: clamp(1.05rem, 3vw, 1.25rem);
-  font-weight: 700;
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  font-weight: 500;
+  line-height: 1.6;
   color: var(--text-color);
-  margin-bottom: 4px;
+  margin-bottom: 8px; /* var(--spacing-xs) spacing for readability */
 }
 
 .profile-hobbies-list li:last-child {
@@ -2286,7 +2301,7 @@ body.state-menu-open {
 
 @media (min-width: 768px) {
   .goods-card-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
   }
   .goods-card-image-wrapper {
@@ -2301,6 +2316,12 @@ body.state-menu-open {
   }
 }
 
+@media (min-width: 1024px) {
+  .goods-card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 /* Trademark Notice */
 .trademark-notice {
   text-align: center;
@@ -2308,5 +2329,179 @@ body.state-menu-open {
   font-size: 0.8rem;
   color: var(--text-muted);
   opacity: 0.85;
+}
+
+/* ==========================================================================
+   Yuru-chara Grand Prix Section
+   ========================================================================== */
+.kitanon-yurugp-compact {
+  display: flex;
+  gap: var(--spacing-sm);
+  background-color: var(--main-color-light);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.yurugp-compact-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.yurugp-compact-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kitanon-content .yurugp-compact-title {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.kitanon-content .yurugp-compact-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.yurugp-compact-btn {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #FFFFFF !important;
+  background-color: var(--accent-color);
+  border-radius: var(--radius-full);
+  padding: 12px 24px;
+  min-height: 44px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  width: fit-content;
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.yurugp-compact-btn:hover {
+  background-color: var(--accent-color-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.yurugp-compact-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.yurugp-compact-btn:hover svg {
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 480px) {
+  .yurugp-compact-btn {
+    width: 100%;
+  }
+}
+
+.kitanon-yurugp-section {
+  padding-top: clamp(60px, 8vw, 80px);
+  padding-bottom: clamp(60px, 8vw, 80px);
+  background-color: var(--main-color-light);
+}
+
+.yurugp-card {
+  background-color: var(--card-bg);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.yurugp-card-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.yurugp-card-content {
+  padding: var(--spacing-md) var(--spacing-md);
+}
+
+.yurugp-card-content h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  color: var(--text-color);
+  margin-top: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.4;
+}
+
+.yurugp-description {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: var(--spacing-md);
+}
+
+.yurugp-action-wrapper {
+  margin-top: var(--spacing-md);
+}
+
+.btn-yurugp-cta {
+  font-size: 1.1rem;
+  padding: 18px 44px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-icon-right {
+  margin-left: 4px;
+}
+
+.yurugp-card-image {
+  width: 100%;
+  max-height: 320px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yurugp-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .yurugp-card-grid-layout {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+  
+  .yurugp-card-content {
+    padding: var(--spacing-lg) var(--spacing-lg);
+  }
+  
+  .btn-yurugp-cta {
+    width: auto;
+    display: inline-flex;
+  }
+  
+  .yurugp-card-image {
+    max-height: none;
+    height: 100%;
+  }
 }
 
