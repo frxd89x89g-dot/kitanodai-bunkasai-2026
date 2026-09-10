@@ -44,7 +44,7 @@
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="apple-touch-icon" href="assets/images/favicon.png">
 
-  <link rel="stylesheet" href="index.css?v=8">
+  <link rel="stylesheet" href="index.css?v=11">
 
   <!-- JSON-LD Structured Data (Event, Organization, WebSite) -->
   <!-- 出演者確定後に performer を追加予定 -->
@@ -166,6 +166,15 @@
           <h2>お知らせ</h2>
         </div>
         <div class="news-list">
+          <!-- きたのんぬりえチャレンジ -->
+          <div class="news-item">
+            <span class="news-date">2026.09.10</span>
+            <div class="news-content">
+              <h3 class="news-item-title">「きたのんぬりえチャレンジ」スタート！</h3>
+              <p class="news-item-body">きたのんのぬりえに挑戦しよう！ぬりえ用紙はサイトからダウンロードできます。好きな色で自由にぬって、完成した作品は北野台文化祭で展示します。</p>
+              <a href="kitanon/#nurie" class="news-link-btn" aria-label="きたのんぬりえチャレンジの詳細を見る">詳細を見る ➔</a>
+            </div>
+          </div>
           <!-- ゆるキャラグランプリエントリー -->
           <div class="news-item">
             <span class="news-date">2026.08</span>
@@ -388,7 +397,7 @@
             <span class="section-tag-light">Kitanon Corner</span>
             <h2>公式キャラクター きたのん</h2>
             <p>北野台のどんぐりの森からやってきた、あたたかい地域を見守る北野台文化祭の公式キャラクター「きたのん」です。</p>
-            <p>文化祭の会場では、子どもたちから大人の方まで自由に塗って楽しめる「きたのん塗り絵チャレンジ」を予定しています。ぬりえ台紙のダウンロード開始や、当日の展示詳細については現在準備中（詳細は後日公開）です。</p>
+            <p>文化祭の会場では、子どもたちから大人の方まで自由に塗って楽しめる「きたのんぬりえチャレンジ」を予定しています。色見本の確認やぬりえ用紙のダウンロードは、下記の「きたのんぬりえチャレンジ」からご覧いただけます。</p>
 
             <!-- ゆるキャラグランプリエントリー案内 -->
             <div class="kitanon-yurugp-compact">
@@ -403,13 +412,13 @@
               </div>
             </div>
 
-            <div class="kitanon-action" style="display: flex; gap: var(--spacing-sm); flex-wrap: wrap;">
+            <div class="kitanon-action">
               <a href="kitanon/" class="btn btn-primary btn-kitanon-cta" id="moreKitanonCta">
                 🌰 きたのん公式ページを見る ➔
               </a>
-              <a href="#" class="btn btn-white disabled-btn" id="downloadCta" style="opacity: 0.65; cursor: not-allowed; pointer-events: none;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                ぬりえ台紙ダウンロード (詳細は後日公開)
+              <a href="kitanon/#nurie" class="btn btn-kitanon-sub-cta" id="nurieChallengeCta">
+                <span class="btn-icon-emoji">🎨</span>
+                <span>きたのんぬりえチャレンジ</span>
               </a>
             </div>
           </div>

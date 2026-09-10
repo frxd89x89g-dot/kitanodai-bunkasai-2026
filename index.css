@@ -1481,6 +1481,68 @@ img {
 
 .kitanon-action {
   margin-top: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.btn-kitanon-cta {
+  font-size: 1.05rem;
+  padding: 16px 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 52px;
+}
+
+/* Sub CTA: Nurie Challenge Button */
+.btn-kitanon-sub-cta {
+  background-color: #FFFFFF;
+  color: var(--text-color);
+  font-size: 0.98rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 52px;
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+.btn-kitanon-sub-cta .btn-icon-emoji {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.btn-kitanon-sub-cta:hover,
+.btn-kitanon-sub-cta:active {
+  background-color: #FFFDF9;
+  color: var(--accent-color);
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+}
+
+@media (max-width: 580px) {
+  .kitanon-action {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-kitanon-cta,
+  .btn-kitanon-sub-cta {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .btn-icon {
